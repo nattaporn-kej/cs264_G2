@@ -88,11 +88,12 @@ app.get('/api', function(req, res) {
 
 
 const options = {
-    hostname: 'jsonplaceholder.typicode.com',
-    path: '/posts/1/comments',
+    hostname: 'restapi.tu.ac.th',
+    path: '/',
     method: 'GET',
     'headers': {
         'Content-Type': 'application/json',
+
     }
 };
 
