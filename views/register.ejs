@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Thammasat University</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert-dev.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/sweetalert/1.1.3/sweetalert.css">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<style>
+    h1 {
+        font-family: "Kanit", sans-serif;
+        margin-left: 2%;
+    }
+    
+    body {
+        font-size: 16px;
+        font-family: "Kanit", sans-serif;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+    
+    jumbotronnn {
+        margin-left: 300px;
+        margin-right: 0px;
+        height: 87%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        background-color: rgb(253, 145, 95);
+        ;
+        opacity: 0.6;
+        filter: alpha(opacity=70);
+    }
+</style>
+
+<body style="background-image: url('https://uppic.cc/d/mCzUfgntvuLen6KTI1jpB');background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>MENU</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="/home" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">หน้าหลัก</a>
+            <a href="/main/data" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ข้อมูลส่วนตัว</a>
+            <a href="/main/register" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">จดทะเบียนล่าช้า</a>
+            <a href="/main/withdrawn" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ถอนรายวิชา</a>
+            <a href="/main/resign" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ยื่นความประสงค์ลาออก</a>
+            <a href="/main/checkStatus" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ตรวจสอบสถานะการชำระเงิน</a>
+            <br><br><br>
+            <a href="/main/contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+            <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log out</a>
+        </div>
+    </nav>
+    <p align='right' style="margin-right: 20px;"><img src="https://uppic.cc/d/SpguGaSioNdG0Gr3LLKb9" width="350" ></p>
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>MENU</span>
+    </header>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+        <div class="w3-container" style="margin-top:20px" id="showcase">
+            <jumbotronnn style="overflow-y: scroll;">
+                <h1 class="w3-jumbo" style="font-size: 50%;color:rgb(75, 33, 12)"><b>จดทะเบียนล่าช้า</b></h1>
+                <div class="container p-3 my-3 bg-light ">
+                    <div class="row">
+                        <div class="col-sm-1"></div>
+                        <div class="col-sm-11">
+                            <dd><b>
+                            <label for="teacher" > <b> เรียน </b> </label>
+                            <input style="background-color: wheat;" type="text" id="teacher " name="teacher" " placeholder="อาจารย์ผู้สอน" ><br><br>
+                            <label for="gender"> <b>ข้าพเจ้า </b> </label>
+                            <select style="background-color: rgb(247, 204, 125);color: rgb(141, 89, 12);" id="gender" name="gender">
+                            <option value="คำนำหน้า">คำนำหน้า</option>
+                            <option value="นาย">นาย</option>
+                            <option value="นางสาว">นางสาว</option>
+                            <option value="นาง">นาง</option>
+                            <option value="ไม่ระบุ">ไม่ระบุ</option>
+                        </select>
+                            <label for="name"> </label>
+                            <input style="background-color: wheat;" type="text" id="name" name="name" value="<%=displayname_th%>"placeholder="ชื่อ-นามสกุล" size="25">
+                            <label for="stid"> <b>เลขทะเบียน</b> </label>
+                            <input style="background-color: wheat;" type="text" id="stid" name="stid" value="<%=username%>" size="10">
+                            <label for="stclass"><b> ชั้นปีที่ </b> </label>
+                            <input style="background-color: wheat;" type="text" id="stclass" name="stclass" value=" " size="1"><br><br>
+                            <label for="stclass"><b> คณะ </b></label>
+                            <input style="background-color: wheat;" type="text" id="department" name="department" value="<%=faculty%>"size="25">
+                            <label for="stclass"> <b> สาขาวิชา </b></label>
+                            <input style="background-color: wheat;" type="text" id="department" name="department"value="<%=department%>" placeholder="สาขาวิชา" size="25"><br><br>
+                            <label for="stclass"> <b> ที่อยู่ที่ติดต่อได้ </b> </label><br>
+                            <textarea style="width:500px;height:100px; background-color: wheat;" id="subject" name="address"></textarea><br><br>
+                            <label for="stclass"> <b> โทรศัพท์ติดต่อนักศึกษา </b></label>
+                            <input style="background-color: wheat;" type="text" id="telStudent" name="telStudent" value="">
+                            <label for="stclass"> <b> โทรศัพท์ติดต่อผู้ปกครอง </b></label>
+                            <input style="background-color: wheat;" type="text" id="telParent" name="telParent" value=""><br><br>
+                            <label for="stclass"> <b> อาจารย์ที่ปรีกษา </b></label>
+                            <select style="background-color: rgb(247, 204, 125);color: rgb(141, 89, 12);" id="gender1" name="gender1">
+                                <option value="คำนำหน้า">คำนำหน้า</option>
+                                <option value="นาย">นาย</option>
+                                <option value="นางสาว">นางสาว</option>
+                                <option value="นาง">นาง</option>
+                                <option value="ไม่ระบุ">ไม่ระบุ</option>
+                            </select>
+                                <label for="fname"> </label>
+                                <input style="background-color: wheat;" type="text" id="fname" name="fname" placeholder="ชื่อ" size="15">
+                                <label for="lname"> </label>
+                                <input style="background-color: wheat;" type="text" id="lname" name="lname" placeholder="นามสกุล" size="15"> <br><br>
+                            <label for="regis1"> <b> จดทะเบียนล่าช้า/เพิ่มล่าช้า </b></label>
+                            <label for="term2"> <b> ภาคการศึกษา</b> </label>
+                            <select style="background-color: rgb(247, 204, 125);color: rgb(141, 89, 12);" id="term2" name="term2">
+                                <option value="ภาคการศึกษาที่1">ภาคการศึกษาที่</option>
+                                <option value="ภาคการศึกษาที่1">ภาคการศึกษาที่1</option>
+                                <option value="ภาคการศึกษาที่2">ภาคการศึกษาที่2</option>
+                                <option value="ภาคการศึกษาที่3">ภาคการศึกษาที่3</option>
+                            <label for="year">  </label>
+                            <input style="background-color: wheat;" type="text" id="year" name="year" placeholder="ปีการศึกษา" size="12"><br><br>
+                            <label for="idsubject"> <b>รหัสวิชา</b></label>
+                            <input style="background-color: wheat;" type="text" id="id" name="id">
+                            <label for="subject"> <b>ชื่อวิชา</b> </label>
+                            <input style="background-color: wheat;" type="text" id="sname" name="sname">
+                            <label for="section"> <b> section </b> </label>
+                            <input style="background-color: wheat;" type="sec" id="sec" name="sec"><br><br>
+                            <label for="reasoning"><b>เหตุผลที่ยื่นคำร้องเนื่องจาก<b></label><br>
+                            <textarea style="width:500px;height:100px; background-color: wheat;"  id="subject" name="reasoning" ></textarea><br><br>
+                        </b></dd>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-10"></div>
+                        <div class="col-sm-2">
+                        <dd>
+                            <button onclick="ensureAlert()" type="button" style="width: 100px; height: 40px; background-color: rgb(160, 75, 49); color: whitesmoke;" class="btn btn-success">Submit</button>
+                        </dd>
+                        </div>
+                        <div><br>
+                        </div>
+                    </div>
+            </jumbotronnn>
+            </div>
+        </div>
+        <script>
+            function ensureAlert(){
+                async function alert() {
+                swal("ดำเนินการเรียบร้อย","","success", {
+                });
+            }
+                   alert().then(window.location.replace("/main/registern/confirm"));
+        }
+                
+        </script>
+</body>
+
+</html>

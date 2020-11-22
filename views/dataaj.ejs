@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Thammasat University</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<style type="text/css">
+    h2 {
+        color: rgb(53, 42, 36);
+        font-family: "Kanit", sans-serif;
+        margin-left: 2%;
+    }
+    p{
+        font-size: 120%;
+        color: rgb(236, 238, 238);
+        font-family: "Kanit", sans-serif;
+
+    }
+    .modal-header{
+        background-color: tomato;
+        color: white;
+    }
+    .modal-body{
+        background-color: rgb(255, 232, 130);
+    }
+    .modal-content{
+        background-color: rgb(255, 201, 130);
+    }
+    .fade {
+        opacity: 0;
+        -webkit-transition: opacity 1s linear;
+        transition: opacity 1s linear;
+    }
+    h1 {
+        font-family: "Kanit", sans-serif;
+        margin-left: 2%;
+    }
+    body {
+        font-size: 16px;
+        font-family: "Kanit", sans-serif;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+    
+    jumbotronnn {
+        margin-left: 300px;
+        margin-right: 0px;
+        height: 87%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        background-color: rgb(253, 145, 95);
+        opacity: 0.9;
+        filter: alpha(opacity=100);
+    }
+    * {
+        box-sizing: border-box;
+    }
+
+    /* Create two equal columns that floats next to each other */
+    .column {
+        float: left;
+        width: 35%;
+        padding: 10px;
+        height: 520px; /* Should be removed. Only for demonstration */
+    }
+
+    /* Clear floats after the columns */
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+    }
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        width: 40%;
+        border: 3px thin rgb(218, 212, 212);
+    }
+
+    th, td {
+        text-align: center;
+        padding: 16px;
+    }
+
+    tr:nth-child(even) {
+        background-color: #792020;
+        opacity: 0.6;
+        filter: alpha(opacity=70);
+    }
+    tr:nth-child(odd) {
+        background-color: #f0edea;
+        opacity: 0.6;
+        filter: alpha(opacity=70);
+    }
+</style>
+<script type="text/javascript">
+    var show = function(){
+        $('#myModal').modal('show');
+    };
+    
+    $(window).load(function(){
+        var timer = window.setTimeout(show,500);
+    });
+    
+    </script>
+</head>
+<body style="background-image: url('https://uppic.cc/d/mCzUfgntvuLen6KTI1jpB');background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>MENU</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="/homeaj" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">หน้าหลัก</a>
+            <a href="/mainaj/data" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ข้อมูลส่วนตัว</a>
+            <a href="/mainaj/listRegister" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายชื่อ น.ศ. จดทะเบียนล่าช้า</a>
+            <a href="/mainaj/listResign" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายชื่อประสงค์ลาออก</a>
+            <a href="/mainaj/listW" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายชื่อ น.ศ. ถอนรายวิชา</a>
+            <a href="/mainaj/save-page1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ทำบันทึกถึงผู้เรียน</a>
+            <a href="/mainaj/message" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ข้อความจากนักศึกษา</a>
+            <br><br><br>
+            <a href="/mainaj/contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+            <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log out</a>
+        </div>
+    </nav>
+    <p align='right' style="margin-right: 20px;"> <br> <img src="https://uppic.cc/d/SpguGaSioNdG0Gr3LLKb9" width="350" ></p>
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>MENU</span>
+    </header>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+       <div class="w3-container" style="margin-top:20px" id="showcase">
+        <jumbotronnn>
+            <h1 class="w3-jumbo" style="font-size: 50%;color:rgb(75, 33, 12)"><b>ข้อมูลส่วนตัว</b></h1>
+            <div class="row">
+                <div class="column" >
+                    <center><p style="margin-top: 5%; margin-left: 5%;"><img src="https://web.reg.tu.ac.th/registrar/getstudentimage.asp?id=<%= username %>&Status=10" width="330" height="412.5"></p></center>
+                </div>
+                <div class="column" >
+                    <br>
+                    <table style="margin-top: 15%;">
+                          <tr>
+                            <td><p style="color: rgb(75, 33, 12);">Name(THAI)</p></td>
+                            <td><p style="color: rgb(75, 33, 12);"><%=displayname_th%></p></td>                             
+                          </tr>
+                          <tr>
+                            <td><p>Name(ENG)</p></td>
+                            <td><p><%=displayname_en%></p></td>
+                          </tr>
+                          <tr>
+                              <td><p style="color: rgb(75, 33, 12);">Email</p></td>
+                              <td><p style="color: rgb(75, 33, 12);"><%=email%></p></td>                             
+                            </tr>
+                      </table>
+                </div>
+            </div>
+            
+            
+        </jumbotronnn>
+             </div>
+    </div>
+   
+</body>
+
+</html>
