@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>Thammasat University</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+<link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+<style>
+    h1 {
+        font-family: "Kanit", sans-serif;
+        margin-left: 2%;
+    }
+    tt{
+        font-family: "Kanit", sans-serif;
+        margin-left: 2%;
+    }
+    body {
+        font-size: 16px;
+        font-family: "Kanit", sans-serif;
+    }
+    
+    .w3-half img {
+        margin-bottom: -6px;
+        margin-top: 16px;
+        opacity: 0.8;
+        cursor: pointer
+    }
+    
+    .w3-half img:hover {
+        opacity: 1
+    }
+    
+    jumbotronnn {
+        margin-left: 300px;
+        margin-right: 0px;
+        height: 87%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        background-color: rgb(253, 145, 95);
+        ;
+        opacity: 0.6;
+        filter: alpha(opacity=70);
+    }
+    box{
+        margin-left: 350px;
+        margin-right: 50px;
+        height: fit-content;
+        width: 70%;
+        position: fixed;
+        z-index: 1;
+        left: 0;
+        right: 0;
+        background-color: rgb(255, 255, 255);
+        ;
+        opacity: 1.0;
+        filter: alpha(opacity=70);
+    }
+</style>
+
+<body style="background-image: url('https://uppic.cc/d/mCzUfgntvuLen6KTI1jpB');background-repeat: no-repeat; background-attachment: fixed; background-size: cover;">
+    <nav class="w3-sidebar w3-red w3-collapse w3-top w3-large w3-padding" style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
+        <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft" style="width:100%;font-size:22px">Close Menu</a>
+        <div class="w3-container">
+            <h3 class="w3-padding-64"><b>MENU</b></h3>
+        </div>
+        <div class="w3-bar-block">
+            <a href="/homeaj" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">หน้าหลัก</a>
+            <a href="/mainaj/data" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ข้อมูลส่วนตัว</a>
+            <a href="/mainaj/listRegister" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายชื่อ น.ศ. จดทะเบียนล่าช้า</a>
+            <a href="/mainaj/listResign" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายชื่อประสงค์ลาออก</a>
+            <a href="/mainaj/listW" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">รายชื่อ น.ศ. ถอนรายวิชา</a>
+            <a href="/mainaj/save-page1" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ทำบันทึกถึงผู้เรียน</a>
+            <a href="/mainaj/message" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">ข้อความจากนักศึกษา</a>
+            <br><br><br>
+            <a href="/mainaj/contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
+            <a href="/" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Log out</a>
+        </div>
+    </nav>
+    <p align='right' style="margin-right: 20px;"><img src="https://uppic.cc/d/SpguGaSioNdG0Gr3LLKb9" width="350" ></p>
+    <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
+        <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
+        <span>MENU</span>
+    </header>
+    <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu" id="myOverlay"></div>
+    <div class="w3-main" style="margin-left:340px;margin-right:40px">
+       <div class="w3-container" style="margin-top:20px" id="showcase">
+            <jumbotronnn>
+                <h1 style="font-size: 300%;color:rgb(75, 33, 12)">รายชื่อ น.ศ. ยื่นความประสงค์ลาออก</h1>
+                <hr style="width:750px;" class="w3-round">
+                <h1 style="font-size: 120%;color:rgb(75, 33, 12)">ปีการศึกษา<tt style="color: whitesmoke;">2563 ภาคการเรียนที่ 1</tt></h1>
+                <box style="overflow-y: scroll; overflow-x: scroll;">
+                    <h1 style="font-size: 100%;color:rgb(75, 33, 12)">ลำดับ <tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>เลขทะเบียนนักศึกษา</tt> <tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>ชื่อ - นามสกุล</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>ยื่นความประสงค์ลาออก<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>อนุมัติ</tt></h1>
+                    <h1 style="font-size: 100%;color:rgb(75, 33, 12)">1<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>62XXXXXXXX<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>นาย&ensp;XXXXX XXXXXX<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><a href="https://we.tl/t-o0XdzBF3HY"><img src="https://uppic.cc/d/Wo4jI_i3RG2ME664h1jLZ" width="3%"></a>(!)<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;</tt><button type="button" style="width: 4%;" onclick="alert('ท่านได้ทำการอนุมัติคำร้องนี้เรียบร้อยแล้ว')"><img src="https://uppic.cc/d/2GKZOUq1kAVpgEJj9HFte" width="100%"></button><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><button type="button" style="width: 4%;" onclick="alert('ท่านได้ทำการปฏิเสธคำร้องนี้เรียบร้อยแล้ว')"><img src="https://uppic.cc/d/pEVhKfUxH9thVUDNniiFh" width="100%"></button></h1>
+                    <h1 style="font-size: 100%;color:rgb(75, 33, 12)">2<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>62XXXXXXXX<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>นางสาว XXXX XXXXX<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><a href="https://we.tl/t-o0XdzBF3HY"><img src="https://uppic.cc/d/Wo4jI_i3RG2ME664h1jLZ" width="3%"></a>(!)<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;</tt><button type="button" style="width: 4%;" onclick="alert('ท่านได้ทำการอนุมัติคำร้องนี้เรียบร้อยแล้ว')"><img src="https://uppic.cc/d/2GKZOUq1kAVpgEJj9HFte" width="100%"></button><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><button type="button" style="width: 4%;" onclick="alert('ท่านได้ทำการปฏิเสธคำร้องนี้เรียบร้อยแล้ว')"><img src="https://uppic.cc/d/pEVhKfUxH9thVUDNniiFh" width="100%"></button></h1>
+                    <h1 style="font-size: 100%;color:rgb(75, 33, 12)">3<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>62XXXXXXXX<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt>นาย&ensp;XXXXX XXXXXX<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><a href="https://we.tl/t-o0XdzBF3HY"><img src="https://uppic.cc/d/Wo4jI_i3RG2ME664h1jLZ" width="3%"></a>(!)<tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><tt>&nbsp;</tt><button type="button" style="width: 4%;" onclick="alert('ท่านได้ทำการอนุมัติคำร้องนี้เรียบร้อยแล้ว')"><img src="https://uppic.cc/d/2GKZOUq1kAVpgEJj9HFte" width="100%"></button><tt>&nbsp;&nbsp;&nbsp;&nbsp;</tt><button type="button" style="width: 4%;" onclick="alert('ท่านได้ทำการปฏิเสธคำร้องนี้เรียบร้อยแล้ว')"><img src="https://uppic.cc/d/pEVhKfUxH9thVUDNniiFh" width="100%"></button></h1>                </box>
+                </box>
+            </jumbotronnn>
+        </div>
+    </div>
+</body>
+
+</html>
